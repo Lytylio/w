@@ -1004,7 +1004,8 @@ local function DCVQW_fake_script() -- Frame_2.LocalScript
 	
 	local function loadFromPastebin()
 		local success, result = pcall(function()
-			return loadstring(game:HttpGet(pastebinUrl))()
+			return
+game:HttpGet(pastebinUrl))()
 		end)
 		if success then
 			setCommandLabelText(result)
@@ -1047,7 +1048,8 @@ local function DCVQW_fake_script() -- Frame_2.LocalScript
 	
 	local function checkKey(key)
 		local success, result = pcall(function()
-			return loadstring(game:HttpGet("https://raw.githubusercontent.com/Lytylio/repo3/main/key.txt"))()
+			return
+game:HttpGet("https://raw.githubusercontent.com/Lytylio/repo3/main/key.txt"))()
 		end)
 		if success and result == key then
 			frame1.Visible = false
