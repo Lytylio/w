@@ -824,7 +824,7 @@ UITextSizeConstraint_17.MaxTextSize = 14
 
 -- Scripts
 
-local function COSTHD_fake_script() -- ImageButton.LocalScript 
+local function HGQJ_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local button = script.Parent
@@ -850,8 +850,8 @@ local function COSTHD_fake_script() -- ImageButton.LocalScript
 	close.MouseButton1Click:Connect(showButton)
 	
 end
-coroutine.wrap(COSTHD_fake_script)()
-local function ZYZOH_fake_script() -- closehub.LocalScript 
+coroutine.wrap(HGQJ_fake_script)()
+local function NSRLXLQ_fake_script() -- closehub.LocalScript 
 	local script = Instance.new('LocalScript', closehub)
 
 	local hub = script.Parent.Parent
@@ -861,8 +861,8 @@ local function ZYZOH_fake_script() -- closehub.LocalScript
 		hub.Visible = false
 	end)
 end
-coroutine.wrap(ZYZOH_fake_script)()
-local function IFKQEV_fake_script() -- SRIPThub.LocalScript 
+coroutine.wrap(NSRLXLQ_fake_script)()
+local function JUUCGEG_fake_script() -- SRIPThub.LocalScript 
 	local script = Instance.new('LocalScript', SRIPThub)
 
 	local frame = script.Parent
@@ -895,8 +895,8 @@ local function IFKQEV_fake_script() -- SRIPThub.LocalScript
 	showFrame1()
 	
 end
-coroutine.wrap(IFKQEV_fake_script)()
-local function QVVKAI_fake_script() -- SRIPThub.LocalScript 
+coroutine.wrap(JUUCGEG_fake_script)()
+local function KUHBXPM_fake_script() -- SRIPThub.LocalScript 
 	local script = Instance.new('LocalScript', SRIPThub)
 
 	local levoeFrame = script.Parent.Gllew.levoeFrame
@@ -920,8 +920,8 @@ local function QVVKAI_fake_script() -- SRIPThub.LocalScript
 		end
 	end
 end
-coroutine.wrap(QVVKAI_fake_script)()
-local function XUCRL_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(KUHBXPM_fake_script)()
+local function YLQNAG_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local commandLabels = {script.Parent.TextLabel1, script.Parent.TextLabel2, script.Parent.TextLabel3, script.Parent.TextLabel4, script.Parent.TextLabel5, script.Parent.TextLabel6, script.Parent.TextLabel7, script.Parent.TextLabel8, script.Parent.TextLabel9, script.Parent.TextLabel10, script.Parent.TextLabel11, script.Parent.TextLabel12, script.Parent.TextLabel13, script.Parent.TextLabel14, script.Parent.TextLabel15}
@@ -966,16 +966,16 @@ local function XUCRL_fake_script() -- Frame_2.LocalScript
 		label.Text = ""
 	end
 end
-coroutine.wrap(XUCRL_fake_script)()
-local function AQVWO_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(YLQNAG_fake_script)()
+local function LKZSE_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local prefix = "> "
 	local pastebinUrl = "https://pastebin.com/raw/BZC688nf"
 	local textBox = script.Parent.TextBox
 	local currentTextLabel = script.Parent.TextLabel1
-	local frameToDestroy = script.Parent
-	local frameToShow = script.Parent.Parent.SRIPThub
+	local frame1 = script.Parent
+	local frame2 = script.Parent.Parent.SRIPThub
 	
 	local function setCommandLabelText(text)
 		local labelText = currentTextLabel.Text
@@ -1023,8 +1023,7 @@ local function AQVWO_fake_script() -- Frame_2.LocalScript
 		local invalidCommands = {
 			"get",
 			"clear",
-			"commands",
-			"key"
+			"commands"
 		}
 		for _, invalidCommand in ipairs(invalidCommands) do
 			if command == invalidCommand then
@@ -1032,6 +1031,14 @@ local function AQVWO_fake_script() -- Frame_2.LocalScript
 			end
 		end
 		return true
+	end
+	
+	local function verifyKey(key)
+		local success, result = pcall(function()
+			local data = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lytylio/repo3/main/key.txt"))()
+			return data.key == key
+		end)
+		return success and result
 	end
 	
 	textBox.FocusLost:Connect(function(enterPressed)
@@ -1054,27 +1061,21 @@ local function AQVWO_fake_script() -- Frame_2.LocalScript
 			elseif isInvalidCommand(text:sub(2)) then
 				setCommandLabelText(text)
 				setCommandLabelText("Invalid command")
+			elseif text:sub(1, 4) == "/key" then
+				local key = text:match("%s+(.+)")
+				if key and verifyKey(key) then
+					setCommandLabelText(text)
+					frame1.Visible = false
+					frame2.Visible = true
+				else
+					setCommandLabelText("Key not found")
+				end
 			else
 				setCommandLabelText(text)
 			end
-	
-			if text:sub(1, 5) == "/key " then
-				local key = text:sub(6)
-				local success, result = pcall(function()
-					return loadstring(game:HttpGet("https://raw.githubusercontent.com/Lytylio/repo3/main/key.txt"))()
-				end)
-				if success and result == key then
-					setCommandLabelText("Key found!")
-					frameToDestroy:Destroy()
-					frameToShow.Visible = true
-				else
-					setCommandLabelText("Key not found.")
-				end
-			end
-	
 			textBox.Text = ""
 		end
 	end)
 	
 end
-coroutine.wrap(AQVWO_fake_script)()
+coroutine.wrap(LKZSE_fake_script)()
