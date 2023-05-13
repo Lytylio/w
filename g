@@ -1,3 +1,14 @@
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
+
+
+-- Instances
+
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local SRIPThub = Instance.new("Frame")
@@ -824,7 +835,7 @@ UITextSizeConstraint_17.MaxTextSize = 14
 
 -- Scripts
 
-local function HGQJ_fake_script() -- ImageButton.LocalScript 
+local function JAHFC_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local button = script.Parent
@@ -850,8 +861,8 @@ local function HGQJ_fake_script() -- ImageButton.LocalScript
 	close.MouseButton1Click:Connect(showButton)
 	
 end
-coroutine.wrap(HGQJ_fake_script)()
-local function NSRLXLQ_fake_script() -- closehub.LocalScript 
+coroutine.wrap(JAHFC_fake_script)()
+local function YLXUXKU_fake_script() -- closehub.LocalScript 
 	local script = Instance.new('LocalScript', closehub)
 
 	local hub = script.Parent.Parent
@@ -861,8 +872,8 @@ local function NSRLXLQ_fake_script() -- closehub.LocalScript
 		hub.Visible = false
 	end)
 end
-coroutine.wrap(NSRLXLQ_fake_script)()
-local function JUUCGEG_fake_script() -- SRIPThub.LocalScript 
+coroutine.wrap(YLXUXKU_fake_script)()
+local function HEHK_fake_script() -- SRIPThub.LocalScript 
 	local script = Instance.new('LocalScript', SRIPThub)
 
 	local frame = script.Parent
@@ -895,8 +906,8 @@ local function JUUCGEG_fake_script() -- SRIPThub.LocalScript
 	showFrame1()
 	
 end
-coroutine.wrap(JUUCGEG_fake_script)()
-local function KUHBXPM_fake_script() -- SRIPThub.LocalScript 
+coroutine.wrap(HEHK_fake_script)()
+local function DAGQ_fake_script() -- SRIPThub.LocalScript 
 	local script = Instance.new('LocalScript', SRIPThub)
 
 	local levoeFrame = script.Parent.Gllew.levoeFrame
@@ -920,8 +931,8 @@ local function KUHBXPM_fake_script() -- SRIPThub.LocalScript
 		end
 	end
 end
-coroutine.wrap(KUHBXPM_fake_script)()
-local function YLQNAG_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(DAGQ_fake_script)()
+local function FTPZB_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local commandLabels = {script.Parent.TextLabel1, script.Parent.TextLabel2, script.Parent.TextLabel3, script.Parent.TextLabel4, script.Parent.TextLabel5, script.Parent.TextLabel6, script.Parent.TextLabel7, script.Parent.TextLabel8, script.Parent.TextLabel9, script.Parent.TextLabel10, script.Parent.TextLabel11, script.Parent.TextLabel12, script.Parent.TextLabel13, script.Parent.TextLabel14, script.Parent.TextLabel15}
@@ -966,8 +977,8 @@ local function YLQNAG_fake_script() -- Frame_2.LocalScript
 		label.Text = ""
 	end
 end
-coroutine.wrap(YLQNAG_fake_script)()
-local function LKZSE_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(FTPZB_fake_script)()
+local function DCVQW_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local prefix = "> "
@@ -1023,7 +1034,8 @@ local function LKZSE_fake_script() -- Frame_2.LocalScript
 		local invalidCommands = {
 			"get",
 			"clear",
-			"commands"
+			"commands",
+			"key"
 		}
 		for _, invalidCommand in ipairs(invalidCommands) do
 			if command == invalidCommand then
@@ -1033,12 +1045,16 @@ local function LKZSE_fake_script() -- Frame_2.LocalScript
 		return true
 	end
 	
-	local function verifyKey(key)
+	local function checkKey(key)
 		local success, result = pcall(function()
-			local data = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lytylio/repo3/main/key.txt"))()
-			return data.key == key
+			return loadstring(game:HttpGet("https://raw.githubusercontent.com/Lytylio/repo3/main/key.txt"))()
 		end)
-		return success and result
+		if success and result == key then
+			frame1.Visible = false
+			frame2.Visible = true
+		else
+			setCommandLabelText("Not key found")
+		end
 	end
 	
 	textBox.FocusLost:Connect(function(enterPressed)
@@ -1062,13 +1078,12 @@ local function LKZSE_fake_script() -- Frame_2.LocalScript
 				setCommandLabelText(text)
 				setCommandLabelText("Invalid command")
 			elseif text:sub(1, 4) == "/key" then
-				local key = text:match("%s+(.+)")
-				if key and verifyKey(key) then
-					setCommandLabelText(text)
-					frame1.Visible = false
-					frame2.Visible = true
+				local key = text:match("%b()")
+				if key then
+					key = key:sub(2, -2)
+					checkKey(key)
 				else
-					setCommandLabelText("Key not found")
+					setCommandLabelText("Invalid key format")
 				end
 			else
 				setCommandLabelText(text)
@@ -1076,6 +1091,5 @@ local function LKZSE_fake_script() -- Frame_2.LocalScript
 			textBox.Text = ""
 		end
 	end)
-	
 end
-coroutine.wrap(LKZSE_fake_script)()
+coroutine.wrap(DCVQW_fake_script)()
