@@ -1002,7 +1002,7 @@ local function WKLRAB_fake_script() -- Frame_2.LocalScript
 	
 	local function loadFromPastebin()
 		local success, result = pcall(function()
-			return game:HttpGet(pastebinUrl)
+			return game:HttpGet(pastebinUrl)()
 		end
 		if success then
 			setCommandLabelText(result)
