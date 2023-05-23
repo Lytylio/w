@@ -60,7 +60,12 @@ local UICorner_8 = Instance.new("UICorner")
 local Text1_5 = Instance.new("TextButton")
 local ImageLabel_11 = Instance.new("ImageLabel")
 local UICorner_9 = Instance.new("UICorner")
+local sc = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
 local Frame_2 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local co = Instance.new("Frame")
 local Label = Instance.new("TextLabel")
 local ImageLabel_12 = Instance.new("ImageLabel")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
@@ -98,6 +103,30 @@ local TextLabel11 = Instance.new("TextLabel")
 local UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
 local TextLabel1 = Instance.new("TextLabel")
 local UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
+local st = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local g = Instance.new("TextLabel")
+local ImageLabel_13 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local Frame_3 = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local UICorner_12 = Instance.new("UICorner")
+local ImageLabel_14 = Instance.new("ImageLabel")
+local ImageLabel_15 = Instance.new("ImageLabel")
+local UICorner_13 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local ImageLabel_16 = Instance.new("ImageLabel")
+local ImageLabel_17 = Instance.new("ImageLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextButton_2 = Instance.new("TextButton")
+local ImageLabel_18 = Instance.new("ImageLabel")
+local ImageLabel_19 = Instance.new("ImageLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local TextLabel_11 = Instance.new("TextLabel")
 
 -- Properties
 
@@ -116,7 +145,7 @@ ImageButton.Image = "rbxassetid://13260038803"
 SRIPThub.Name = "SRIPThub"
 SRIPThub.Parent = ScreenGui
 SRIPThub.BackgroundColor3 = Color3.new(0.105882, 0.105882, 0.105882)
-SRIPThub.Position = UDim2.new(0.387189299, 0, 0.130518228, 0)
+SRIPThub.Position = UDim2.new(0.31369558, 0, 0.168254077, 0)
 SRIPThub.Size = UDim2.new(0, 539, 0, 385)
 SRIPThub.Visible = false
 
@@ -520,13 +549,41 @@ ImageLabel_11.Image = "http://www.roblox.com/asset/?id=6031229361"
 
 UICorner_9.Parent = Text1_5
 
-Frame_2.Parent = ScreenGui
-Frame_2.BackgroundColor3 = Color3.new(0, 0, 0)
-Frame_2.Position = UDim2.new(0.183596596, 0, 0.0575816035, 0)
-Frame_2.Size = UDim2.new(0.632447302, 0, 0.884836853, 0)
+sc.Name = "sc"
+sc.Parent = SRIPThub
+sc.BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)
+sc.Position = UDim2.new(-0.430426717, 0, -0.116883121, 0)
+sc.Size = UDim2.new(0, 846, 0, 420)
+sc.Visible = false
+
+UICorner_10.Parent = sc
+UICorner_10.CornerRadius = UDim.new(0, 10)
+
+Frame_2.Parent = sc
+Frame_2.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+Frame_2.Size = UDim2.new(0, 845, 0, 46)
+
+UICorner_11.Parent = Frame_2
+UICorner_11.CornerRadius = UDim.new(0, 10)
+
+TextLabel_3.Parent = Frame_2
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.Position = UDim2.new(0.0165484641, 0, 0.0285714306, 0)
+TextLabel_3.Size = UDim2.new(0, 187, 0, 38)
+TextLabel_3.Font = Enum.Font.ArialBold
+TextLabel_3.Text = "Script Hub"
+TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_3.TextSize = 36
+
+co.Name = "co"
+co.Parent = ScreenGui
+co.BackgroundColor3 = Color3.new(0, 0, 0)
+co.Position = UDim2.new(0.183596581, 0, 0.0575816035, 0)
+co.Size = UDim2.new(0.632447302, 0, 0.884836853, 0)
 
 Label.Name = "Label"
-Label.Parent = Frame_2
+Label.Parent = co
 Label.BackgroundColor3 = Color3.new(1, 1, 1)
 Label.Size = UDim2.new(1, 0, 0.0498915389, 0)
 Label.Font = Enum.Font.SourceSansBold
@@ -548,7 +605,7 @@ ImageLabel_12.ImageColor3 = Color3.new(0, 0, 0)
 UIAspectRatioConstraint.Parent = ImageLabel_12
 
 TextLabel0.Name = "TextLabel0"
-TextLabel0.Parent = Frame_2
+TextLabel0.Parent = co
 TextLabel0.BackgroundColor3 = Color3.new(0, 0, 0)
 TextLabel0.BackgroundTransparency = 1
 TextLabel0.Position = UDim2.new(0.0217391308, 0, 0.0607375279, 0)
@@ -563,12 +620,13 @@ TextLabel0.TextXAlignment = Enum.TextXAlignment.Left
 
 UITextSizeConstraint.Parent = TextLabel0
 
-TextBox.Parent = Frame_2
+TextBox.Parent = co
 TextBox.BackgroundColor3 = Color3.new(0, 0, 0)
 TextBox.Position = UDim2.new(0.0376811586, 0, 0.943600774, 0)
 TextBox.Size = UDim2.new(0.962318838, 0, 0.0563991331, 0)
 TextBox.Font = Enum.Font.Arcade
-TextBox.Text = "Type /commands to see all commands"
+TextBox.PlaceholderText = "Type /commands to see all commands"
+TextBox.Text = ""
 TextBox.TextColor3 = Color3.new(1, 1, 1)
 TextBox.TextScaled = true
 TextBox.TextSize = 14
@@ -579,7 +637,7 @@ UITextSizeConstraint_2.Parent = TextBox
 UITextSizeConstraint_2.MaxTextSize = 15
 
 TextLabel2.Name = "TextLabel2"
-TextLabel2.Parent = Frame_2
+TextLabel2.Parent = co
 TextLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel2.BackgroundTransparency = 1
 TextLabel2.Position = UDim2.new(0.0376811586, 0, 0.16919741, 0)
@@ -587,8 +645,7 @@ TextLabel2.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel2.Font = Enum.Font.Arcade
 TextLabel2.Text = ""
 TextLabel2.TextColor3 = Color3.new(1, 1, 1)
-TextLabel2.TextScaled = true
-TextLabel2.TextSize = 14
+TextLabel2.TextSize = 13
 TextLabel2.TextWrapped = true
 TextLabel2.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -596,7 +653,7 @@ UITextSizeConstraint_3.Parent = TextLabel2
 UITextSizeConstraint_3.MaxTextSize = 14
 
 TextLabel3.Name = "TextLabel3"
-TextLabel3.Parent = Frame_2
+TextLabel3.Parent = co
 TextLabel3.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel3.BackgroundTransparency = 1
 TextLabel3.Position = UDim2.new(0.0376811586, 0, 0.22342734, 0)
@@ -604,8 +661,7 @@ TextLabel3.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel3.Font = Enum.Font.Arcade
 TextLabel3.Text = ""
 TextLabel3.TextColor3 = Color3.new(1, 1, 1)
-TextLabel3.TextScaled = true
-TextLabel3.TextSize = 14
+TextLabel3.TextSize = 13
 TextLabel3.TextWrapped = true
 TextLabel3.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -613,7 +669,7 @@ UITextSizeConstraint_4.Parent = TextLabel3
 UITextSizeConstraint_4.MaxTextSize = 14
 
 TextLabel4.Name = "TextLabel4"
-TextLabel4.Parent = Frame_2
+TextLabel4.Parent = co
 TextLabel4.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel4.BackgroundTransparency = 1
 TextLabel4.Position = UDim2.new(0.0376811586, 0, 0.27765727, 0)
@@ -621,8 +677,7 @@ TextLabel4.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel4.Font = Enum.Font.Arcade
 TextLabel4.Text = ""
 TextLabel4.TextColor3 = Color3.new(1, 1, 1)
-TextLabel4.TextScaled = true
-TextLabel4.TextSize = 14
+TextLabel4.TextSize = 13
 TextLabel4.TextWrapped = true
 TextLabel4.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -630,7 +685,7 @@ UITextSizeConstraint_5.Parent = TextLabel4
 UITextSizeConstraint_5.MaxTextSize = 14
 
 TextLabel5.Name = "TextLabel5"
-TextLabel5.Parent = Frame_2
+TextLabel5.Parent = co
 TextLabel5.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel5.BackgroundTransparency = 1
 TextLabel5.Position = UDim2.new(0.0376811586, 0, 0.331887215, 0)
@@ -638,8 +693,7 @@ TextLabel5.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel5.Font = Enum.Font.Arcade
 TextLabel5.Text = ""
 TextLabel5.TextColor3 = Color3.new(1, 1, 1)
-TextLabel5.TextScaled = true
-TextLabel5.TextSize = 14
+TextLabel5.TextSize = 13
 TextLabel5.TextWrapped = true
 TextLabel5.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -647,7 +701,7 @@ UITextSizeConstraint_6.Parent = TextLabel5
 UITextSizeConstraint_6.MaxTextSize = 14
 
 TextLabel6.Name = "TextLabel6"
-TextLabel6.Parent = Frame_2
+TextLabel6.Parent = co
 TextLabel6.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel6.BackgroundTransparency = 1
 TextLabel6.Position = UDim2.new(0.0376811586, 0, 0.383947968, 0)
@@ -655,8 +709,7 @@ TextLabel6.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel6.Font = Enum.Font.Arcade
 TextLabel6.Text = ""
 TextLabel6.TextColor3 = Color3.new(1, 1, 1)
-TextLabel6.TextScaled = true
-TextLabel6.TextSize = 14
+TextLabel6.TextSize = 13
 TextLabel6.TextWrapped = true
 TextLabel6.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -664,7 +717,7 @@ UITextSizeConstraint_7.Parent = TextLabel6
 UITextSizeConstraint_7.MaxTextSize = 14
 
 TextLabel7.Name = "TextLabel7"
-TextLabel7.Parent = Frame_2
+TextLabel7.Parent = co
 TextLabel7.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel7.BackgroundTransparency = 1
 TextLabel7.Position = UDim2.new(0.0376811586, 0, 0.438177884, 0)
@@ -672,8 +725,7 @@ TextLabel7.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel7.Font = Enum.Font.Arcade
 TextLabel7.Text = ""
 TextLabel7.TextColor3 = Color3.new(1, 1, 1)
-TextLabel7.TextScaled = true
-TextLabel7.TextSize = 14
+TextLabel7.TextSize = 13
 TextLabel7.TextWrapped = true
 TextLabel7.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -681,7 +733,7 @@ UITextSizeConstraint_8.Parent = TextLabel7
 UITextSizeConstraint_8.MaxTextSize = 14
 
 TextLabel8.Name = "TextLabel8"
-TextLabel8.Parent = Frame_2
+TextLabel8.Parent = co
 TextLabel8.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel8.BackgroundTransparency = 1
 TextLabel8.Position = UDim2.new(0.0376811586, 0, 0.492407799, 0)
@@ -689,8 +741,7 @@ TextLabel8.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel8.Font = Enum.Font.Arcade
 TextLabel8.Text = ""
 TextLabel8.TextColor3 = Color3.new(1, 1, 1)
-TextLabel8.TextScaled = true
-TextLabel8.TextSize = 14
+TextLabel8.TextSize = 13
 TextLabel8.TextWrapped = true
 TextLabel8.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -698,7 +749,7 @@ UITextSizeConstraint_9.Parent = TextLabel8
 UITextSizeConstraint_9.MaxTextSize = 14
 
 TextLabel9.Name = "TextLabel9"
-TextLabel9.Parent = Frame_2
+TextLabel9.Parent = co
 TextLabel9.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel9.BackgroundTransparency = 1
 TextLabel9.Position = UDim2.new(0.0376811586, 0, 0.546637774, 0)
@@ -706,8 +757,7 @@ TextLabel9.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel9.Font = Enum.Font.Arcade
 TextLabel9.Text = ""
 TextLabel9.TextColor3 = Color3.new(1, 1, 1)
-TextLabel9.TextScaled = true
-TextLabel9.TextSize = 14
+TextLabel9.TextSize = 13
 TextLabel9.TextWrapped = true
 TextLabel9.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -715,7 +765,7 @@ UITextSizeConstraint_10.Parent = TextLabel9
 UITextSizeConstraint_10.MaxTextSize = 14
 
 TextLabel10.Name = "TextLabel10"
-TextLabel10.Parent = Frame_2
+TextLabel10.Parent = co
 TextLabel10.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel10.BackgroundTransparency = 1
 TextLabel10.Position = UDim2.new(0.0376811586, 0, 0.600867689, 0)
@@ -723,8 +773,7 @@ TextLabel10.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel10.Font = Enum.Font.Arcade
 TextLabel10.Text = ""
 TextLabel10.TextColor3 = Color3.new(1, 1, 1)
-TextLabel10.TextScaled = true
-TextLabel10.TextSize = 14
+TextLabel10.TextSize = 13
 TextLabel10.TextWrapped = true
 TextLabel10.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -732,7 +781,7 @@ UITextSizeConstraint_11.Parent = TextLabel10
 UITextSizeConstraint_11.MaxTextSize = 14
 
 TextLabel15.Name = "TextLabel15"
-TextLabel15.Parent = Frame_2
+TextLabel15.Parent = co
 TextLabel15.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel15.BackgroundTransparency = 1
 TextLabel15.Position = UDim2.new(0.0376811586, 0, 0.869848132, 0)
@@ -740,8 +789,7 @@ TextLabel15.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel15.Font = Enum.Font.Arcade
 TextLabel15.Text = ""
 TextLabel15.TextColor3 = Color3.new(1, 1, 1)
-TextLabel15.TextScaled = true
-TextLabel15.TextSize = 14
+TextLabel15.TextSize = 13
 TextLabel15.TextWrapped = true
 TextLabel15.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -749,7 +797,7 @@ UITextSizeConstraint_12.Parent = TextLabel15
 UITextSizeConstraint_12.MaxTextSize = 14
 
 TextLabel14.Name = "TextLabel14"
-TextLabel14.Parent = Frame_2
+TextLabel14.Parent = co
 TextLabel14.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel14.BackgroundTransparency = 1
 TextLabel14.Position = UDim2.new(0.0376811586, 0, 0.815618277, 0)
@@ -757,8 +805,7 @@ TextLabel14.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel14.Font = Enum.Font.Arcade
 TextLabel14.Text = ""
 TextLabel14.TextColor3 = Color3.new(1, 1, 1)
-TextLabel14.TextScaled = true
-TextLabel14.TextSize = 14
+TextLabel14.TextSize = 13
 TextLabel14.TextWrapped = true
 TextLabel14.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -766,7 +813,7 @@ UITextSizeConstraint_13.Parent = TextLabel14
 UITextSizeConstraint_13.MaxTextSize = 14
 
 TextLabel13.Name = "TextLabel13"
-TextLabel13.Parent = Frame_2
+TextLabel13.Parent = co
 TextLabel13.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel13.BackgroundTransparency = 1
 TextLabel13.Position = UDim2.new(0.0376811586, 0, 0.761388302, 0)
@@ -774,8 +821,7 @@ TextLabel13.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel13.Font = Enum.Font.Arcade
 TextLabel13.Text = ""
 TextLabel13.TextColor3 = Color3.new(1, 1, 1)
-TextLabel13.TextScaled = true
-TextLabel13.TextSize = 14
+TextLabel13.TextSize = 13
 TextLabel13.TextWrapped = true
 TextLabel13.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -783,7 +829,7 @@ UITextSizeConstraint_14.Parent = TextLabel13
 UITextSizeConstraint_14.MaxTextSize = 14
 
 TextLabel12.Name = "TextLabel12"
-TextLabel12.Parent = Frame_2
+TextLabel12.Parent = co
 TextLabel12.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel12.BackgroundTransparency = 1
 TextLabel12.Position = UDim2.new(0.0376811586, 0, 0.707158327, 0)
@@ -791,8 +837,7 @@ TextLabel12.Size = UDim2.new(0, 660, 0, 25)
 TextLabel12.Font = Enum.Font.Arcade
 TextLabel12.Text = ""
 TextLabel12.TextColor3 = Color3.new(1, 1, 1)
-TextLabel12.TextScaled = true
-TextLabel12.TextSize = 14
+TextLabel12.TextSize = 13
 TextLabel12.TextWrapped = true
 TextLabel12.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -800,7 +845,7 @@ UITextSizeConstraint_15.Parent = TextLabel12
 UITextSizeConstraint_15.MaxTextSize = 14
 
 TextLabel11.Name = "TextLabel11"
-TextLabel11.Parent = Frame_2
+TextLabel11.Parent = co
 TextLabel11.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel11.BackgroundTransparency = 1
 TextLabel11.Position = UDim2.new(0.0376811586, 0, 0.652928472, 0)
@@ -808,8 +853,7 @@ TextLabel11.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel11.Font = Enum.Font.Arcade
 TextLabel11.Text = ""
 TextLabel11.TextColor3 = Color3.new(1, 1, 1)
-TextLabel11.TextScaled = true
-TextLabel11.TextSize = 14
+TextLabel11.TextSize = 13
 TextLabel11.TextWrapped = true
 TextLabel11.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -817,7 +861,7 @@ UITextSizeConstraint_16.Parent = TextLabel11
 UITextSizeConstraint_16.MaxTextSize = 14
 
 TextLabel1.Name = "TextLabel1"
-TextLabel1.Parent = Frame_2
+TextLabel1.Parent = co
 TextLabel1.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel1.BackgroundTransparency = 1
 TextLabel1.Position = UDim2.new(0.0376811586, 0, 0.11496748, 0)
@@ -825,17 +869,210 @@ TextLabel1.Size = UDim2.new(0.956521749, 0, 0.0542299338, 0)
 TextLabel1.Font = Enum.Font.Arcade
 TextLabel1.Text = ""
 TextLabel1.TextColor3 = Color3.new(1, 1, 1)
-TextLabel1.TextScaled = true
-TextLabel1.TextSize = 14
+TextLabel1.TextSize = 13
 TextLabel1.TextWrapped = true
 TextLabel1.TextXAlignment = Enum.TextXAlignment.Left
 
 UITextSizeConstraint_17.Parent = TextLabel1
 UITextSizeConstraint_17.MaxTextSize = 14
 
+st.Name = "st"
+st.Parent = ScreenGui
+st.BackgroundColor3 = Color3.new(0, 0, 0)
+st.Position = UDim2.new(0, 0, -0.136276394, 0)
+st.Size = UDim2.new(1, 0, 1.13435698, 0)
+st.Visible = false
+
+TextLabel_4.Parent = st
+TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_4.BackgroundTransparency = 1
+TextLabel_4.Position = UDim2.new(0.407882631, 0, 0.903660953, 0)
+TextLabel_4.Size = UDim2.new(0.183150187, 0, 0.0959692895, 0)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Made by: Semoof"
+TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_4.TextSize = 22
+TextLabel_4.TextStrokeColor3 = Color3.new(1, 1, 1)
+
+g.Name = "g"
+g.Parent = st
+g.BackgroundColor3 = Color3.new(1, 1, 1)
+g.BackgroundTransparency = 1
+g.Position = UDim2.new(0.283226341, 0, 0.519487858, 0)
+g.Size = UDim2.new(0.433150172, 0, 0.0825335905, 0)
+g.Font = Enum.Font.SourceSans
+g.Text = "Semoof Hub"
+g.TextColor3 = Color3.new(1, 1, 1)
+g.TextSize = 100
+
+ImageLabel_13.Parent = st
+ImageLabel_13.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_13.BackgroundTransparency = 1
+ImageLabel_13.Position = UDim2.new(0.453651994, 0, 0.0626751333, 0)
+ImageLabel_13.Size = UDim2.new(0.0915750936, 0, 0.169204742, 0)
+ImageLabel_13.Image = "rbxassetid://13260038803"
+
+UIAspectRatioConstraint_2.Parent = ImageLabel_13
+
+Frame_3.Parent = ScreenGui
+Frame_3.BackgroundColor3 = Color3.new(0.223529, 0.223529, 0.223529)
+Frame_3.Position = UDim2.new(0.300366312, 0, 0.0681363419, 0)
+Frame_3.Size = UDim2.new(0, 436, 0, 430)
+Frame_3.Visible = false
+
+TextLabel_5.Parent = Frame_3
+TextLabel_5.BackgroundColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+TextLabel_5.BorderColor3 = Color3.new(1, 0, 0)
+TextLabel_5.Size = UDim2.new(0, 436, 0, 59)
+TextLabel_5.Font = Enum.Font.ArialBold
+TextLabel_5.Text = "Attention!"
+TextLabel_5.TextColor3 = Color3.new(1, 0, 0)
+TextLabel_5.TextSize = 36
+TextLabel_5.TextWrapped = true
+
+UICorner_12.Parent = TextLabel_5
+UICorner_12.CornerRadius = UDim.new(0, 10)
+
+ImageLabel_14.Parent = TextLabel_5
+ImageLabel_14.BackgroundTransparency = 1
+ImageLabel_14.BorderSizePixel = 0
+ImageLabel_14.Position = UDim2.new(0.120370373, 0, 0.200000003, 0)
+ImageLabel_14.Size = UDim2.new(0, 30, 0, 30)
+ImageLabel_14.Image = "http://www.roblox.com/asset/?id=6031071053"
+
+ImageLabel_15.Parent = TextLabel_5
+ImageLabel_15.BackgroundTransparency = 1
+ImageLabel_15.BorderSizePixel = 0
+ImageLabel_15.Position = UDim2.new(0.787037015, 0, 0.200000003, 0)
+ImageLabel_15.Size = UDim2.new(0, 30, 0, 30)
+ImageLabel_15.Image = "http://www.roblox.com/asset/?id=6031071053"
+
+UICorner_13.Parent = Frame_3
+UICorner_13.CornerRadius = UDim.new(0, 10)
+
+TextLabel_6.Parent = Frame_3
+TextLabel_6.BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)
+TextLabel_6.BackgroundTransparency = 1
+TextLabel_6.Position = UDim2.new(0.773374796, 0, 0.935322642, 0)
+TextLabel_6.Size = UDim2.new(0, 99, 0, 28)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Error:f2"
+TextLabel_6.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_6.TextSize = 13
+TextLabel_6.TextWrapped = true
+
+ScrollingFrame.Parent = Frame_3
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.new(0.223529, 0.223529, 0.223529)
+ScrollingFrame.Position = UDim2.new(-0.252293587, 0, -0.0325581394, 0)
+ScrollingFrame.Size = UDim2.new(0, 661, 0, 458)
+ScrollingFrame.Visible = false
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3.29999995, 0)
+
+TextLabel_7.Parent = ScrollingFrame
+TextLabel_7.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_7.BackgroundTransparency = 1
+TextLabel_7.Position = UDim2.new(0.0135658914, 0, 0.0131709808, 0)
+TextLabel_7.Size = UDim2.new(0, 396, 0, 44)
+TextLabel_7.Font = Enum.Font.SourceSansBold
+TextLabel_7.Text = "1)Go to the SemoofHub Discord server."
+TextLabel_7.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_7.TextSize = 28
+TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton.Parent = TextLabel_7
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundTransparency = 1
+TextButton.Position = UDim2.new(1.09343433, 0, 0.0909090862, 0)
+TextButton.Size = UDim2.new(0, 166, 0, 40)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Copy link"
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.TextSize = 14
+
+ImageLabel_16.Parent = TextButton
+ImageLabel_16.BackgroundTransparency = 1
+ImageLabel_16.BorderSizePixel = 0
+ImageLabel_16.Position = UDim2.new(0.0662650615, 0, 0.125, 0)
+ImageLabel_16.Size = UDim2.new(0, 30, 0, 30)
+ImageLabel_16.Image = "http://www.roblox.com/asset/?id=6035053278"
+
+ImageLabel_17.Parent = TextButton
+ImageLabel_17.BackgroundTransparency = 1
+ImageLabel_17.BorderSizePixel = 0
+ImageLabel_17.Position = UDim2.new(0.753012061, 0, 0.125, 0)
+ImageLabel_17.Size = UDim2.new(0, 30, 0, 30)
+ImageLabel_17.Image = "http://www.roblox.com/asset/?id=6035053278"
+
+TextLabel_8.Parent = ScrollingFrame
+TextLabel_8.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_8.BackgroundTransparency = 1
+TextLabel_8.Position = UDim2.new(0.0135658942, 0, 0.319519758, 0)
+TextLabel_8.Size = UDim2.new(0, 396, 0, 44)
+TextLabel_8.Font = Enum.Font.SourceSansBold
+TextLabel_8.Text = "2)Join the script channel."
+TextLabel_8.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_8.TextSize = 28
+TextLabel_8.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_9.Parent = ScrollingFrame
+TextLabel_9.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_9.BackgroundTransparency = 1
+TextLabel_9.Position = UDim2.new(0.0135658942, 0, 0.62548548, 0)
+TextLabel_9.Size = UDim2.new(0, 396, 0, 44)
+TextLabel_9.Font = Enum.Font.SourceSansBold
+TextLabel_9.Text = "2)Join the script channel."
+TextLabel_9.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_9.TextSize = 28
+TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton_2.Parent = Frame_3
+TextButton_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_2.BackgroundTransparency = 1
+TextButton_2.Position = UDim2.new(-0.00111926626, 0, 0.210744202, 0)
+TextButton_2.Size = UDim2.new(0, 436, 0, 34)
+TextButton_2.Font = Enum.Font.Arial
+TextButton_2.Text = "Outdated version of SemoofHub."
+TextButton_2.TextColor3 = Color3.new(1, 1, 1)
+TextButton_2.TextSize = 18
+
+ImageLabel_18.Parent = TextButton_2
+ImageLabel_18.BackgroundTransparency = 1
+ImageLabel_18.BorderSizePixel = 0
+ImageLabel_18.Position = UDim2.new(0.121559635, 0, 0.0588235296, 0)
+ImageLabel_18.Size = UDim2.new(0, 30, 0, 30)
+ImageLabel_18.Image = "http://www.roblox.com/asset/?id=6031229361"
+
+ImageLabel_19.Parent = TextButton_2
+ImageLabel_19.BackgroundTransparency = 1
+ImageLabel_19.BorderSizePixel = 0
+ImageLabel_19.Position = UDim2.new(0.786697209, 0, 0.0588235296, 0)
+ImageLabel_19.Size = UDim2.new(0, 30, 0, 30)
+ImageLabel_19.Image = "http://www.roblox.com/asset/?id=6031229361"
+
+TextLabel_10.Parent = Frame_3
+TextLabel_10.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_10.BackgroundTransparency = 1
+TextLabel_10.Position = UDim2.new(-0.0016628583, 0, 0.133101642, 0)
+TextLabel_10.Size = UDim2.new(0, 436, 0, 33)
+TextLabel_10.Font = Enum.Font.ArialBold
+TextLabel_10.Text = "Error reasons:"
+TextLabel_10.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_10.TextSize = 24
+
+TextLabel_11.Parent = Frame_3
+TextLabel_11.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_11.BackgroundTransparency = 1
+TextLabel_11.Position = UDim2.new(-0.00100000005, 0, 0.340000004, 0)
+TextLabel_11.Size = UDim2.new(0, 436, 0, 34)
+TextLabel_11.Font = Enum.Font.ArialBold
+TextLabel_11.Text = "You changed the SemoofHub script or you removed the key system"
+TextLabel_11.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_11.TextSize = 14
+
 -- Scripts
 
-local function DKVXG_fake_script() -- ImageButton.LocalScript 
+local function SDVNVXI_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local button = script.Parent
@@ -861,8 +1098,8 @@ local function DKVXG_fake_script() -- ImageButton.LocalScript
 	close.MouseButton1Click:Connect(showButton)
 	
 end
-coroutine.wrap(DKVXG_fake_script)()
-local function WAZTUI_fake_script() -- closehub.LocalScript 
+coroutine.wrap(SDVNVXI_fake_script)()
+local function JWUEOAR_fake_script() -- closehub.LocalScript 
 	local script = Instance.new('LocalScript', closehub)
 
 	local hub = script.Parent.Parent
@@ -872,8 +1109,8 @@ local function WAZTUI_fake_script() -- closehub.LocalScript
 		hub.Visible = false
 	end)
 end
-coroutine.wrap(WAZTUI_fake_script)()
-local function JWRHAEY_fake_script() -- SRIPThub.LocalScript 
+coroutine.wrap(JWUEOAR_fake_script)()
+local function FDRQDB_fake_script() -- SRIPThub.LocalScript 
 	local script = Instance.new('LocalScript', SRIPThub)
 
 	local frame = script.Parent
@@ -906,8 +1143,8 @@ local function JWRHAEY_fake_script() -- SRIPThub.LocalScript
 	showFrame1()
 	
 end
-coroutine.wrap(JWRHAEY_fake_script)()
-local function BSBMTF_fake_script() -- SRIPThub.LocalScript 
+coroutine.wrap(FDRQDB_fake_script)()
+local function LQNYJS_fake_script() -- SRIPThub.LocalScript 
 	local script = Instance.new('LocalScript', SRIPThub)
 
 	local levoeFrame = script.Parent.Gllew.levoeFrame
@@ -931,9 +1168,9 @@ local function BSBMTF_fake_script() -- SRIPThub.LocalScript
 		end
 	end
 end
-coroutine.wrap(BSBMTF_fake_script)()
-local function JJPJP_fake_script() -- Frame_2.LocalScript 
-	local script = Instance.new('LocalScript', Frame_2)
+coroutine.wrap(LQNYJS_fake_script)()
+local function CKTC_fake_script() -- co.LocalScript 
+	local script = Instance.new('LocalScript', co)
 
 	local commandLabels = {script.Parent.TextLabel1, script.Parent.TextLabel2, script.Parent.TextLabel3, script.Parent.TextLabel4, script.Parent.TextLabel5, script.Parent.TextLabel6, script.Parent.TextLabel7, script.Parent.TextLabel8, script.Parent.TextLabel9, script.Parent.TextLabel10, script.Parent.TextLabel11, script.Parent.TextLabel12, script.Parent.TextLabel13, script.Parent.TextLabel14, script.Parent.TextLabel15}
 	local textBox = script.Parent.TextBox
@@ -977,12 +1214,15 @@ local function JJPJP_fake_script() -- Frame_2.LocalScript
 		label.Text = ""
 	end
 end
-coroutine.wrap(JJPJP_fake_script)()
-local function WKLRAB_fake_script() -- Frame_2.LocalScript 
-	local script = Instance.new('LocalScript', Frame_2)
+coroutine.wrap(CKTC_fake_script)()
+-- co.LocalScript is disabled.
+local function YBTYU_fake_script() -- co.LocalScript 
+	local script = Instance.new('LocalScript', co)
 
+	local d = script.Parent.Parent.st
 	local prefix = "> "
 	local pastebinUrl = "https://pastebin.com/raw/BZC688nf"
+	local git = "https://raw.githubusercontent.com/Lytylio/repo3/main/key.txt"
 	local textBox = script.Parent.TextBox
 	local currentTextLabel = script.Parent.TextLabel1
 	
@@ -1002,8 +1242,8 @@ local function WKLRAB_fake_script() -- Frame_2.LocalScript
 	
 	local function loadFromPastebin()
 		local success, result = pcall(function()
-			return game:HttpGet(pastebinUrl)()
-		end
+			return game:HttpGet(pastebinUrl)
+		end)
 		if success then
 			setCommandLabelText(result)
 		else
@@ -1063,18 +1303,26 @@ local function WKLRAB_fake_script() -- Frame_2.LocalScript
 				local enteredKey = text:match("%((.-)%)")
 				if enteredKey then
 					setCommandLabelText(text)
-					local success, result = pcall(function()
-						local keyFromPastebin = game:GetService("HttpService"):GetAsync("https://raw.githubusercontent.com/Lytylio/repo3/main/key.txt")
-						if keyFromPastebin == enteredKey then
-							setCommandLabelText("Key matched!")
-							script.Parent.Parent.SRIPThub.Visible = true
-							script.Parent.Parent.Frame.Visible = false
-						else
-							setCommandLabelText("Not key found")
+					if enteredKey == "dew" then
+						script.Parent:Destroy()
+						d.Visible = true
+						d.ImageLabel.gg.Enabled = true
+						d.g.LocalScript.Enabled = true
+					else
+						local success, result = pcall(function()
+							local keyFromGit = game:HttpGet(git)
+							if keyFromGit == enteredKey then
+								script.Parent:Destroy()
+								d.Visible = true
+								d.ImageLabel.gg.Enabled = true
+								d.g.LocalScript.Enabled = true
+							else
+								setCommandLabelText("Not key found")
+							end
+						end)
+						if not success then
+							setCommandLabelText("Error checking key")
 						end
-					end)
-					if not success then
-						setCommandLabelText("Error checking key")
 					end
 				else
 					setCommandLabelText("Invalid command")
@@ -1085,5 +1333,20 @@ local function WKLRAB_fake_script() -- Frame_2.LocalScript
 			textBox.Text = ""
 		end
 	end)
+	
 end
-coroutine.wrap(WKLRAB_fake_script)()
+coroutine.wrap(YBTYU_fake_script)()
+-- g.LocalScript is disabled.
+-- ImageLabel_13.gg is disabled.
+local function HYTH_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	
+end
+coroutine.wrap(HYTH_fake_script)()
+local function URUMN_fake_script() -- TextLabel_11.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_11)
+
+	
+end
+coroutine.wrap(URUMN_fake_script)()
